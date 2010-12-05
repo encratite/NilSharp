@@ -25,5 +25,33 @@ namespace Nil
 			output.Add(lastToken);
 			return output.ToArray();
 		}
+
+		public static string GetFileSizeString(long size)
+		{
+			string[] units =
+			{
+				"B",
+				"KiB",
+				"MiB",
+				"GiB",
+				"TiB",
+			};
+
+			const int factor = 1024;
+			double correctedSize = size;
+			int unitIndex = 0;
+			while (correctedSize >= factor && unitIndex < units.Length - 1)
+			{
+				correctedSize /= factor;
+				unitIndex++;
+			}
+			string sizeString;
+			if (unitIndex == 0)
+				sizeString = size.ToString();
+			else
+				sizeString = string.Format("{0:F2}", correctedSize);
+			sizeString += " " + units[unitIndex];
+			return sizeString;
+		}
 	}
 }
