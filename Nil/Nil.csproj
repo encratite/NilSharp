@@ -46,6 +46,7 @@
     <Compile Include="FormState.cs" />
     <Compile Include="OperatingSystem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SerialisableDictionary.cs" />
     <Compile Include="Serialiser.cs" />
     <Compile Include="String.cs" />
   </ItemGroup>
