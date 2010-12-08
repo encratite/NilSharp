@@ -24,11 +24,7 @@ namespace Nil
 					FileType.Directory :
 					FileType.File;
 			}
-			catch (FileNotFoundException)
-			{
-				return FileType.DoesNotExist;
-			}
-			catch (DirectoryNotFoundException)
+			catch (Exception)
 			{
 				return FileType.DoesNotExist;
 			}
