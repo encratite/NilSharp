@@ -30,9 +30,12 @@ namespace Nil
 				x = WindowOffset.X,
 				y = WindowOffset.Y;
 
+			//it's set to -4, -4 in my theme
+			const int windowsMaximisationMargin = 16;
+
 			return
 			!(
-				x < 0 || y < 0 ||
+				x + WindowSize.Width < 0 || y + windowsMaximisationMargin < 0 ||
 				x > Screen.PrimaryScreen.WorkingArea.Width || y > Screen.PrimaryScreen.WorkingArea.Height
 			);
 		}
