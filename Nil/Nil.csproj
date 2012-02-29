@@ -42,6 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Output.cs" />
     <Compile Include="File.cs" />
     <Compile Include="FormState.cs" />
     <Compile Include="OperatingSystem.cs" />
