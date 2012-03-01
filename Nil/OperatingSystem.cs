@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace Nil
 {
@@ -9,7 +6,7 @@ namespace Nil
 	{
 		public static string Name()
 		{
-			System.OperatingSystem operatingSystem = System.Environment.OSVersion;
+			System.OperatingSystem operatingSystem = Environment.OSVersion;
 			string osName = "Unknown operating system";
 
 			switch (operatingSystem.Platform)
