@@ -2,21 +2,24 @@
 
 namespace Nil
 {
-	public class Output
+	public static class Output
 	{
 		static Object consoleLock = new Object();
 
-		public static void Write(string input)
+		public static void Write(string input, params object[] arguments)
 		{
 			lock (consoleLock)
 			{
-				Console.Write(input);
+				Console.Write(input, arguments);
 			}
 		}
 
-		public static void WriteLine(string input)
+		public static void WriteLine(string input, params object[] arguments)
 		{
-			Write(input + "\n");
+			lock (consoleLock)
+			{
+				Console.WriteLine(input, arguments);
+			}
 		}
 	}
 }

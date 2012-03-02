@@ -3,7 +3,7 @@ using System.IO;
 
 namespace Nil
 {
-	public class File
+	public static class File
 	{
 		public enum FileType
 		{

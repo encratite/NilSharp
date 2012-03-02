@@ -3,9 +3,9 @@ using System.Collections.Generic;
 
 namespace Nil
 {
-	public class String
+	public static class String
 	{
-		public static string[] Tokenise(string input, string delimiter)
+		public static string[] Tokenise(this string input, string delimiter)
 		{
 			List<string> output = new List<string>();
 			int lastOffset = 0;

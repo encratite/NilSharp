@@ -2,7 +2,7 @@
 
 namespace Nil
 {
-	public class OperatingSystem
+	public static class OperatingSystem
 	{
 		public static string Name()
 		{
