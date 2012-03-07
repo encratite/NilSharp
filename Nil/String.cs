@@ -5,7 +5,7 @@ namespace Nil
 {
 	public static class String
 	{
-		public static string[] Tokenise(this string input, string delimiter)
+		public static List<string> Tokenise(this string input, string delimiter)
 		{
 			List<string> output = new List<string>();
 			int lastOffset = 0;
@@ -16,12 +16,12 @@ namespace Nil
 					break;
 				string token = input.Substring(i, offset - i);
 				output.Add(token);
-				i += delimiter.Length;
+				i = offset + delimiter.Length;
 				lastOffset = i;
 			}
 			string lastToken = input.Substring(lastOffset);
 			output.Add(lastToken);
-			return output.ToArray();
+			return output;
 		}
 
 		public static string GetFileSizeString(long size)
