@@ -6,7 +6,12 @@ namespace Nil
 	{
 		public static string Timestamp()
 		{
-			return DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+			return DateTime.Now.ToStandardString();
+		}
+
+		public static string ToStandardString(this DateTime time)
+		{
+			return time.ToString("yyyy-MM-dd HH:mm:ss");
 		}
 	}
 }
